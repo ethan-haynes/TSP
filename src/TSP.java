@@ -9,7 +9,7 @@ public class TSP {
 	
 	public static void main(String[] args) {
 	    Scanner scan;
-	    File file = new File("/Users/Haynes/Desktop/tsp/tsp1000.txt");
+	    File file = new File("./data/tsp100.txt");
 	    List<Double> coordinates = new ArrayList<>();
 	    
 	    try {
@@ -18,7 +18,9 @@ public class TSP {
 	        	coordinates.add(scan.nextDouble());
 	        }
 	    } catch (FileNotFoundException e1) {
+	    		System.out.println("error accessing file " + file);
 	            e1.printStackTrace();
+	            System.exit(1);
 	    }
 	    
 	    TourFacade tf = new TourFacade(coordinates);

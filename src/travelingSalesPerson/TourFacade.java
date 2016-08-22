@@ -1,5 +1,6 @@
 package travelingSalesPerson;
 
+import java.util.Arrays;
 import java.util.List;
 
 public class TourFacade {
@@ -24,8 +25,8 @@ public class TourFacade {
 		
 		Tour fittest = pop.getFittest();
 
-		System.out.println(fittest.getCitys().toString());
 		System.out.println(fittest.getDistance());
+		System.out.println(Arrays.toString(fittest.getCitys()));
     }
 	
 }
